@@ -264,7 +264,7 @@ class Ansi2HTMLConverter(object):
         self.ansi_codes_prog = re.compile('\033\\[' '([\\d;]*)' '([a-zA-z])')
         # Regex to match all ANSI codes from https://github.com/chalk/ansi-regex
         self.strip_ansi_codes_prog = re.compile(
-            r'[\u001B\u009B][\\\[\]()#;?]*(?:(?:(?:[a-zA-Z\d]*(?:;[-a-zA-Z\d\/#&.:=?%@~_]*)*)?\u0007)|'
+            r'[\033\0233][\\\[\]()#;?]*(?:(?:(?:[a-zA-Z\d]*(?:;[-a-zA-Z\d\/#&.:=?%@~_]*)*)?\07)|'
             r'(?:(?:\d{1,4}(?:;\d{0,4})*)?[\dA-PR-TZcf-ntqry=><~]))'
         )
 
